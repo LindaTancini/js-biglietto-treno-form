@@ -16,35 +16,38 @@
   </head>
   <body>
     <!--CONTAINER CREAZIONE BIGLIETTO-->
-    <div class="container mt-3">
-      <div class="row">
-        <div class="col-md-4">
-          <label class="form-label">Nome Cognome</label>
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            value="Linda Tancini"
-          />
+    <form action="index.html">
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-md-4">
+            <label class="form-label">Nome Cognome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              value="Linda Tancini"
+            />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Km da percorrere</label>
+            <input type="number" class="form-control" id="km" value="10" />
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Fascia d'età</label>
+            <select class="form-select" id="age">
+              <option>Minorenne</option>
+              <option>Maggiorenne</option>
+              <option>Over 65</option>
+            </select>
+          </div>
         </div>
-        <div class="col-md-4">
-          <label class="form-label">Km da percorrere</label>
-          <input type="number" class="form-control" id="km" value="10" />
-        </div>
-        <div class="col-md-4">
-          <label class="form-label">Fascia d'età</label>
-          <select class="form-select" id="age">
-            <option>Minorenne</option>
-            <option>Maggiorenne</option>
-            <option>Over 65</option>
-          </select>
+        <div class="text-center mt-3">
+          <button class="btn btn-secondary" id="generate">Genera</button>
+          <button class="btn btn-secondary" id="delete">Annulla</button>
         </div>
       </div>
-      <div class="text-center mt-3">
-        <button class="btn btn-secondary" id="generate">Genera</button>
-        <button class="btn btn-secondary" id="delete">Annulla</button>
-      </div>
-    </div>
+    </form>
+    <p id="result"></p>
 
     <!--Foglio JS-->
     <script src="main.js"></script>
