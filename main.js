@@ -43,3 +43,10 @@ buttonElement.addEventListener("click", function (event) {
     2
   )}€`;
 });
+
+// annullo le modifiche apportate con il bottone annulla
+deleteButtonElement.addEventListener("click", function () {
+  nameElement.value = "";
+  kmElement.value = "";
+  ageElement.value = "";
+});
