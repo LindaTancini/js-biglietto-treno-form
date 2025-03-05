@@ -15,6 +15,8 @@ let carrozzaElement = document.getElementById("add-carrozza");
 let cpElement = document.getElementById("add-cp");
 // prezzo del biglietto
 const resultElement = document.getElementById("result");
+// ticket visibile quando compilato
+const ticketElement = document.getElementById("generated-ticket");
 
 // rendo funzionanti i bottoni
 buttonElement.addEventListener("click", function (event) {
@@ -31,6 +33,8 @@ buttonElement.addEventListener("click", function (event) {
   const basePrice = kmPrice * userKm;
   let finalPrice = basePrice;
   userNameElement.innerText = nameElement.value;
+  // il ticket diventa visibile
+  ticketElement.classList.add("visible");
   // Sconto 20% per minorenni < 18
   if (userAge === "Minorenne") {
     finalPrice *= 0.8;
@@ -60,4 +64,6 @@ deleteButtonElement.addEventListener("click", function () {
   nameElement.value = "";
   kmElement.value = "";
   ageElement.value = "";
+  //annullando le modifiche cancello il biglietto dalla pagina
+  ticketElement.classList.remove("visible");
 });
