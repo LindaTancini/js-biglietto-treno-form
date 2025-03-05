@@ -1,12 +1,20 @@
 console.log("Ciao Linda");
 
-// km da percorrere
-const userKm = parseFloat(prompt("Quanti kilometri devi percorrere?"));
-console.log(userKm);
+// prendo gli elementi dalla pagina
+const nameElement = document.getElementById("name");
+console.log(nameElement);
+const kmElement = document.getElementById("km");
+console.log(kmElement);
+const ageElement = document.getElementById("age");
+console.log(ageElement);
 
 // Età dell'utente
-const userAge = parseInt(prompt("Inserisci la tua età"));
+const userAge = parseInt("Inserisci la tua età");
 console.log(userAge);
+
+// km da percorrere
+const userKm = parseFloat("Quanti kilometri devi percorrere?");
+console.log(userKm);
 
 // Dati delle variabili
 const kmPrice = 0.21;
