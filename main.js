@@ -3,28 +3,18 @@ console.log("Ciao Linda");
 // prendo gli elementi dalla pagina
 // nome, km e età
 const nameElement = document.getElementById("name");
-console.log(nameElement);
 const kmElement = document.getElementById("km");
-console.log(kmElement);
 const ageElement = document.getElementById("age");
-console.log(ageElement);
 //bottoni
 const buttonElement = document.getElementById("generate");
-console.log(buttonElement);
 const deleteButtonElement = document.getElementById("delete");
-console.log(deleteButtonElement);
 //nome passeggero , offerta, carrozza, codice cp
 const userNameElement = document.getElementById("add-name");
-console.log(userNameElement);
 const offerElement = document.getElementById("add-offer");
-console.log(offerElement);
 let carrozzaElement = document.getElementById("add-carrozza");
-console.log(carrozzaElement);
 let cpElement = document.getElementById("add-cp");
-console.log(cpElement);
 // prezzo del biglietto
 const resultElement = document.getElementById("result");
-console.log(resultElement);
 
 // rendo funzionanti i bottoni
 buttonElement.addEventListener("click", function (event) {
@@ -40,17 +30,23 @@ buttonElement.addEventListener("click", function (event) {
   const kmPrice = 0.21;
   const basePrice = kmPrice * userKm;
   let finalPrice = basePrice;
+  userNameElement.innerText = nameElement.value;
   // Sconto 20% per minorenni < 18
   if (userAge === "Minorenne") {
     finalPrice *= 0.8;
+    offerElement.innerText = "Sconto Minorenne";
+    resultElement.innerText = finalPrice.toFixed(2) + `€`;
     // prezzo standard per maggiorenni
   } else if (userAge === "Maggiorenne") {
     finalPrice = basePrice;
+    offerElement.innerText = "Biglietto Standard";
+    resultElement.innerText = finalPrice.toFixed(2) + `€`;
     // Sconto 40% over >65
   } else if (userAge === "Over 65") {
     finalPrice *= 0.6;
+    offerElement.innerText = "Sconto Silver";
+    resultElement.innerText = finalPrice.toFixed(2) + `€`;
   }
-
   // numero carrozza
   carrozzaElement.innerText = Math.floor(Math.random() * 5) + 1;
   // codice CP
