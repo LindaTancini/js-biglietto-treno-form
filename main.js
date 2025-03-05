@@ -43,10 +43,14 @@ buttonElement.addEventListener("click", function (event) {
   // Sconto 20% per minorenni < 18
   if (userAge === "Minorenne") {
     finalPrice *= 0.8;
+    // prezzo standard per maggiorenni
+  } else if (userAge === "Maggiorenne") {
+    finalPrice = basePrice;
     // Sconto 40% over >65
   } else if (userAge === "Over 65") {
     finalPrice *= 0.6;
   }
+
   // numero carrozza
   carrozzaElement.innerText = Math.floor(Math.random() * 5) + 1;
   // codice CP
