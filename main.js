@@ -16,6 +16,15 @@ console.log(deleteButtonElement);
 // prezzo del biglietto
 const resultElement = document.getElementById("result");
 console.log(resultElement);
+//nome passeggero , offerta, carrozza, codice cp
+const userNameElement = document.getElementById("add-name");
+console.log(userNameElement);
+const offerElement = document.getElementById("add-offer");
+console.log(offerElement);
+const carrozzaElement = document.getElementById("add-carrozza");
+console.log(carrozzaElement);
+const cpElement = document.getElementById("add-cp");
+console.log(cpElement);
 
 // rendo funzionanti i bottoni
 buttonElement.addEventListener("click", function (event) {
@@ -39,9 +48,7 @@ buttonElement.addEventListener("click", function (event) {
     finalPrice *= 0.6;
   }
   // Messaggio del prezzo finale
-  resultElement.innerText = `Il prezzo del tuo biglietto è: ${finalPrice.toFixed(
-    2
-  )}€`;
+  resultElement.innerText = finalPrice.toFixed(2) + "€";
 });
 
 // annullo le modifiche apportate con il bottone annulla
