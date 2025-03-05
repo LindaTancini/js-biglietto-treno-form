@@ -13,18 +13,18 @@ const buttonElement = document.getElementById("generate");
 console.log(buttonElement);
 const deleteButtonElement = document.getElementById("delete");
 console.log(deleteButtonElement);
-// prezzo del biglietto
-const resultElement = document.getElementById("result");
-console.log(resultElement);
 //nome passeggero , offerta, carrozza, codice cp
 const userNameElement = document.getElementById("add-name");
 console.log(userNameElement);
 const offerElement = document.getElementById("add-offer");
 console.log(offerElement);
-const carrozzaElement = document.getElementById("add-carrozza");
+let carrozzaElement = document.getElementById("add-carrozza");
 console.log(carrozzaElement);
-const cpElement = document.getElementById("add-cp");
+let cpElement = document.getElementById("add-cp");
 console.log(cpElement);
+// prezzo del biglietto
+const resultElement = document.getElementById("result");
+console.log(resultElement);
 
 // rendo funzionanti i bottoni
 buttonElement.addEventListener("click", function (event) {
@@ -47,6 +47,10 @@ buttonElement.addEventListener("click", function (event) {
   } else if (userAge === "Over 65") {
     finalPrice *= 0.6;
   }
+  // numero carrozza
+  carrozzaElement.innerText = Math.floor(Math.random() * 5) + 1;
+  // codice CP
+  cpElement.innerText = Math.floor(Math.random() * 99999) + 10000;
   // Messaggio del prezzo finale
   resultElement.innerText = finalPrice.toFixed(2) + "€";
 });
