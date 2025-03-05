@@ -13,9 +13,13 @@ const buttonElement = document.getElementById("generate");
 console.log(buttonElement);
 const deleteButtonElement = document.getElementById("delete");
 console.log(deleteButtonElement);
+// prezzo del biglietto
+const resultElement = document.getElementById("result");
+console.log(resultElement);
 
 // rendo funzionanti i bottoni
-buttonElement.addEventListener("click", function () {
+buttonElement.addEventListener("click", function (event) {
+  event.preventDefault();
   console.log(nameElement.value);
   console.log(kmElement.value);
   console.log(ageElement.value);
@@ -35,5 +39,7 @@ buttonElement.addEventListener("click", function () {
     finalPrice *= 0.6;
   }
   // Messaggio del prezzo finale
-  console.log(`Il prezzo del tuo biglietto è: ${finalPrice.toFixed(2)}€`);
+  resultElement.innerText = `Il prezzo del tuo biglietto è: ${finalPrice.toFixed(
+    2
+  )}€`;
 });
