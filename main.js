@@ -1,5 +1,3 @@
-console.log("Ciao Linda");
-
 // prendo gli elementi dalla pagina
 // nome, km e età
 const nameElement = document.getElementById("name");
@@ -23,9 +21,6 @@ const ticketElement = document.getElementById("generated-ticket");
 // rendo funzionanti i bottoni
 formElement.addEventListener("submit", function (event) {
   event.preventDefault();
-  console.log(nameElement.value);
-  console.log(kmElement.value);
-  console.log(ageElement.value);
   // Età dell'utente
   const userAge = ageElement.value;
   // km da percorrere
