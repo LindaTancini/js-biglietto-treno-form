@@ -5,6 +5,8 @@ console.log("Ciao Linda");
 const nameElement = document.getElementById("name");
 const kmElement = document.getElementById("km");
 const ageElement = document.getElementById("age");
+// form
+const formElement = document.getElementById("form-ticket");
 //bottoni
 const buttonElement = document.getElementById("generate");
 const deleteButtonElement = document.getElementById("delete");
@@ -19,7 +21,7 @@ const resultElement = document.getElementById("result");
 const ticketElement = document.getElementById("generated-ticket");
 
 // rendo funzionanti i bottoni
-buttonElement.addEventListener("click", function (event) {
+formElement.addEventListener("submit", function (event) {
   event.preventDefault();
   console.log(nameElement.value);
   console.log(kmElement.value);
