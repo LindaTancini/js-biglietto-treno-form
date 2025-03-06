@@ -1,20 +1,31 @@
 body {
-  background-color: #b91450;
+  background-color: #da8f8f;
 }
 
 form {
-  background-color: #fff;
+  background-color: #c5daa6;
   border-radius: 10px;
   padding: 20px 0;
 }
 
+#name,
+#km,
+#age {
+  background-color: #f3bcbd;
+}
+
+.btn {
+  background-color: #fcffcb;
+  color: black;
+}
+
 .ticket-structure {
-  background-color: #fff;
+  background-color: #c5daa6;
   padding-bottom: 20px;
 }
 
 .bg-gray {
-  background-color: #808080;
+  background-color: #f3bcbd;
 }
 
 #generated-ticket {
